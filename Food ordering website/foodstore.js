@@ -40,6 +40,10 @@ function handleServerResponse(){
             xmlResponse = xmlHttp.responseXML;
             xmlDocumentElement = xmlResponse.documentElement;
             message = xmlDocumentElement.firstChild.data;
+            document.getElementById("underInput").innerHTML = '<span style="color:blue">' + message + '</span>';
+            setTimeout('process()',1000);
+        }else{
+            alert('Something went wrong!');
         }
     }
 }
