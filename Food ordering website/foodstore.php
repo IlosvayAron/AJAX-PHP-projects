@@ -7,7 +7,7 @@
         $foodArray = array('tuna', 'bacon', 'beef', 'loaf', 'ham');
         if(in_array($food,$foodArray))
             echo 'We do have ' . $food . '!';
-        elseif($food == ''
+        elseif($food == '')
             echo 'Please enter a food!';
         else
             echo 'Sorry, we don\'t sell no ' . $food . '!';//Sajnáljuk, de nem adunk el $food-ot.
