@@ -1,6 +1,6 @@
-var xmlHttp = creatXmlHttpRequestObject();
+var xmlHttp = createXmlHttpRequestObject();
 
-function creatXmlHttpRequestObject(){
+function createXmlHttpRequestObject(){
     var xmlHttp;
 
     if(window.ActiveXObject){
@@ -26,7 +26,7 @@ function creatXmlHttpRequestObject(){
 function process(){
     if(xmlHttp.readyState==0 || xmlHttp.readyState==4){
         food = encodeURIComponent(document.getElementById("userInput").value);
-        xmlHttp.open("GET","foodstore.php?food=",+food,true);
+        xmlHttp.open("GET","foodstore.php?food="+food,true);
         xmlHttp.onreadystatechange = handleServerResponse;
         xmlHttp.send(null);
     }else{
