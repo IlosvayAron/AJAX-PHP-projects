@@ -33,3 +33,13 @@ function process(){
         setTimeout('process()',1000);
     }
 }
+
+function handleServerResponse(){
+    if(xmlHttp.readyState == 4){
+        if(xmlHttp.status == 200){
+            xmlResponse = xmlHttp.responseXML;
+            xmlDocumentElement = xmlResponse.documentElement;
+            message = xmlDocumentElement.firstChild.data;
+        }
+    }
+}
